@@ -3,7 +3,7 @@ package com.academy.ex;
 public class javaacademy2 {
 
 	public static void main(String[] args) {
-		//안녕 3번 찎기
+		//1부터 100
 		int i;
 		for(i=1;i<=100;i++) {
 			System.out.println(i);
@@ -13,6 +13,7 @@ public class javaacademy2 {
 			System.out.println(a);
 			a++;
 		}
+		//5부터8까지
 		int i1;
 		for(i1=5;i1<9;i1++) {
 			System.out.println(i1);
@@ -22,6 +23,7 @@ public class javaacademy2 {
 			System.out.println(b);
 			b++;
 		}
+		//13부터 22까지
 		int i2;
 		for(i2=13;i2<23;i2++) {
 			System.out.println(i2);
