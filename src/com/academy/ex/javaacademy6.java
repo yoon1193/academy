@@ -438,7 +438,7 @@ public class javaacademy6 {
 
 		}
 
-		if(x<0) {
+		else {
 
 			System.out.println(x2);
 
@@ -468,19 +468,14 @@ public class javaacademy6 {
 
 		}
 
-		if(bmi>=20) {
-
-			if(bmi<25) {
-
+		else if(bmi>=20 && bmi<25) {
 			System.out.println("표준");
-
-			}
 
 		
 
 		}
 
-		if(bmi>=25) {
+		else {
 
 			System.out.println("과체중");
 

@@ -23,10 +23,11 @@ public class javaacademy7 {
 		  
 
 		  for(i=0;i<5;i++) {
+			
 
 		  System.out.println("¼öÀÔ·Â");
 
-		 i=Integer.parseInt(sc.nextLine());
+		  i=Integer.parseInt(sc.nextLine());
 
 		  }
 
