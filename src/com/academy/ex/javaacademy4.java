@@ -1,6 +1,6 @@
 package com.academy.ex;
 
-public class javaacademy3 {
+public class javaacademy4 {
 
 	public static void main(String[] args) {
 		//if 조건문
@@ -18,7 +18,7 @@ public class javaacademy3 {
 		}
 		else {
 			System.out.println("false");				
-		}
+		}*/
 		
 		
 		if(true) 
@@ -32,13 +32,31 @@ public class javaacademy3 {
 		if(10<40) { 
 			System.out.println("true");
 		}
-		*/
+		
 		int a=10;
 		if(a==10) {
 			System.out.println("true");
 		}
-		if(a!=17) {//a가 10이 아니면
+		if(a!=7) {//a가 10이 아니면
 			System.out.println("true");
+		}
+		//true,false 1,0 일반적인 언어에서 0이 아니면 true 취급.
+		//if(1){} 조건식이 실행
+		//if(0){} 조건식이 싷행 안됨
+		//if(23){} 조건식이 실행
+		//자료형 기본자료형 참조자료형
+		//기본자료형 비교 ==  변수가 가리키는 값비교
+		//참조자료형은 .equals 변수가 가리키는 주소에 있는 값비교
+		
+		String s1="홍길동";
+		String s2="홍길동";
+		String s3=new String("홍길동");
+		String s4=new String("홍길동");
+		if(s3==s4) {
+			System.out.println("== 이용해 같은 경우");
+		}
+		if(s3.equals(s4)) {
+			System.out.println("equals 이용해 같은 경우");
 		}
 		
 		
