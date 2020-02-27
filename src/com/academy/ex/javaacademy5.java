@@ -75,7 +75,7 @@ public class javaacademy5 {
 			System.out.println("너도 잘가");
 
 		}
-
+		
 		
 
 		

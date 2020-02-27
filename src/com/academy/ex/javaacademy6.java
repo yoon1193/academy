@@ -505,30 +505,7 @@ public class javaacademy6 {
 
 		sc.close();
 
-	
-
-			
-
-			
-
-			
-
-	
-
-		
-
-		
-
-		
-
-	
-
- 
-
 	}
-
  
-
  
-
 }
