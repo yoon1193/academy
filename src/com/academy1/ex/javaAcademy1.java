@@ -166,7 +166,7 @@ public class javaAcademy1 {
 		else {
 			m=m-(m*40/100);
 		}
-		System.out.println("다음 학기 납일할 등록급은"+m+"만원 입니다");*/
+		System.out.println("다음 학기 납일할 등록급은"+m+"만원 입니다");
 		
 		//도전3
 		System.out.println("전기 사용량을 입력하세요(kw)");
@@ -201,7 +201,16 @@ public class javaAcademy1 {
 		m=(int) (p+(kw*p1));
 		m=(int) m+(m)*9/100;
 	
-		System.out.println("이번 달 요금은"+m+"입니다");
+		System.out.println("이번 달 요금은"+m+"원입니다");*/
+		
+		//문제3
+		System.out.println("3개의 정수를 입력하시오:");
+		int num=sc.nextInt();
+		int num1=sc.nextInt();
+		int num2=sc.nextInt();
+		
+		
+		
 
 	}
 
