@@ -7,7 +7,7 @@ public class javaAcademy1 {
 
 	public static void main(String[] args) {
 		Scanner sc=new Scanner(System.in);
-		/*//문제1
+		//문제1
 		int a=3,b=0;
 		switch(a+2) {
 		case 5:b=1;
@@ -77,18 +77,19 @@ public class javaAcademy1 {
 		 
 		//연습문제3
 		System.out.println("두 정수를 입력");
-		int a=sc.nextInt();
-		int b=sc.nextInt();
+		int a1=sc.nextInt();
+		int b1=sc.nextInt();
+		int result;
 		
-		if(a>=10) {
-			System.out.println(a);
+		if(a1>=10) {
+			result=a1;
 		}
-		else if(b!=0) {
-			System.out.println(a/b);
+		else { 
+			if(b1!=0) {
+				result=a1/b1;
+		    }		
 		}
-		else {
-			System.out.println(b!=0);		
-		}
+
 		
 		//연습문제4
 		System.out.println("두 정수 입력");
@@ -138,21 +139,21 @@ public class javaAcademy1 {
 		int e=sc.nextInt();
 		String s=sc.next();
 		int f=sc.nextInt();
-		int result = 0;
+		int result1 = 0;
 		
 		switch(s) {
-		case "+": result=e+f;
+		case "+": result1=e+f;
 		break;
-		case"-": result=e-f;
+		case"-": result1=e-f;
 		break;
-		case"*": result=e*f;
+		case"*": result1=e*f;
 		break;
-		case"/": result=e/f;
+		case"/": result1=e/f;
 		break;
 		default:
 			break;
 		}
-		System.out.println(result);
+		System.out.println(result1);
 		
 		//도전2
 		int m=100;
@@ -203,7 +204,6 @@ public class javaAcademy1 {
 			p1=494.00;	
 		}
 		int money=(int) (p+(kw*p1));
-		money=(int) (p+(kw*p1));
 		money=(int) money+(money)*9/100;
 	
 		System.out.println("이번 달 요금은"+money+"원입니다");
@@ -319,7 +319,7 @@ public class javaAcademy1 {
 		}
 		else {
 			System.out.println(i);
-		}*/
+		}
 		
 		System.out.println("3과목 점수를 입력하세요");
 		int kor=sc.nextInt();
