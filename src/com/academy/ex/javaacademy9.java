@@ -160,8 +160,9 @@ public class javaacademy9 {
 			b=c;
 			c=i;
 		}
-		System.out.println(a+""+b+""+c);
+		System.out.println(a+"\n"+b+"\n"+c);
 			
+		//
 		
 			
 
