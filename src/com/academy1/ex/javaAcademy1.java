@@ -1,5 +1,6 @@
 package com.academy1.ex;
 
+import java.util.Random;
 import java.util.Scanner;
 
 public class javaAcademy1 {
@@ -173,7 +174,11 @@ public class javaAcademy1 {
 		int kw=sc.nextInt();
 		int p;
 		double p1;
-		if(kw>=1&&kw<=100) {
+		if(kw<=0){
+			p=0;
+			p1=0;
+		}
+		else if(kw>=1&&kw<=100) {
 			p=370;
 			p1=52.00;
 		}
@@ -197,18 +202,141 @@ public class javaAcademy1 {
 			p=9330;
 			p1=494.00;	
 		}
-		int m=(int) (p+(kw*p1));
-		m=(int) (p+(kw*p1));
-		m=(int) m+(m)*9/100;
+		int money=(int) (p+(kw*p1));
+		money=(int) (p+(kw*p1));
+		money=(int) money+(money)*9/100;
 	
-		System.out.println("이번 달 요금은"+m+"원입니다");*/
+		System.out.println("이번 달 요금은"+money+"원입니다");
 		
-		//문제3
+		//문제
 		System.out.println("3개의 정수를 입력하시오:");
 		int num=sc.nextInt();
 		int num1=sc.nextInt();
 		int num2=sc.nextInt();
+		if(num>num1 && num>num2) {
+			if(num1>num2) {
+				System.out.println("가장큰수:"+num+"중간:"+num1+"가장작은수:"+num2);
+				
+			}
+			else {
+				System.out.println("가장큰수:"+num+"중간:"+num2+"가장작은수:"+num1);
+			}
+		}
+		else if(num1>num && num1>num2) {
+			if(num>num2) {
+				System.out.println("가장큰수:"+num1+"중간:"+num+"가장작은수:"+num2);
+			}
+			else {
+				System.out.println("가장큰수:"+num1+"중간:"+num2+"가장작은수:"+num);
+			}
+		}
+		else if(num2>num && num2>num1) {
+			if(num>num1) {
+				System.out.println("가장큰수:"+num2+"중간:"+num+"가장작은수:"+num1);
+			}
+			else {
+				System.out.println("가장큰수:"+num2+"중간:"+num1+"가장작은수:"+num);
+			}
+		}
 		
+		//문제3	
+		System.out.println("3개의 정수를 입력하시오:");
+		int numb=sc.nextInt();
+		int numb1=sc.nextInt();
+		int numb2=sc.nextInt();
+		int min;
+		min=numb;
+		if(numb1<min) {
+			numb1=min;
+		}
+		else if(numb2<min) {
+			numb2=min;
+		}
+		System.out.println(min);
+		
+		//문제4
+		Random rand=new Random();
+		System.out.println("선택하시오(1:가위 2:바위 3:보)");
+		int user=sc.nextInt();
+		int com=rand.nextInt(3)+1;
+		
+		switch(com) {
+		case 1:
+			System.out.println("컴퓨터는 가위를 냄");
+			if(user==1) {
+				System.out.println("비겼음");
+			}
+			else if(user==2) {
+				System.out.println("사용자가 이겼음");
+			}
+			else if(user==3) {
+				System.out.println("컴퓨터가 이겼음");
+			}
+			break;
+		case 2:
+			System.out.println("컴퓨터는 바위를 냄");
+			if(user==1) {
+				System.out.println("컴퓨터가 이겼음");
+			}
+			else if(user==2) {
+				System.out.println("비겼음");
+			}
+			else if(user==3) {
+				System.out.println("사용자가 이겼음");
+			}
+			break;
+		case 3:
+			System.out.println("컴퓨터는 보를냄");
+			if(user==1) {
+				System.out.println("사용자가 이겼음");
+			}
+			else if(user==2) {
+				System.out.println("컴퓨터가 이겼음");
+			}
+			else if(user==3) {
+				System.out.println("비겼음");
+			}
+			break;
+			default:
+				break;
+		}
+		
+		//아래 두 순서를 코드로 작성
+		System.out.println("3개의 정수 입력");
+		int g=sc.nextInt();
+		int h=sc.nextInt();
+		int i=sc.nextInt();
+		if(g>h) {
+			if(g>i) {
+				System.out.println(g);
+			}
+			else {
+				System.out.println(i);
+			}
+		}
+		else if(h>i) {
+			System.out.println(h);
+		}
+		else {
+			System.out.println(i);
+		}*/
+		
+		System.out.println("3과목 점수를 입력하세요");
+		int kor=sc.nextInt();
+		int eng=sc.nextInt();
+		int mat=sc.nextInt();
+		int avg=(kor+eng+mat)/3;
+		if(avg>=60) {
+			if(kor>=60&&eng>=60&&mat>=60) {
+				System.out.println("합격");
+			}
+			else {
+				System.out.println("과락 탈락");
+			}
+		}
+		else {
+			System.out.println("평균미달  탈락");
+		}
 		
 		
 
