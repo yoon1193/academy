@@ -6,9 +6,28 @@ public class javaAcademy1 {
 
 	public static void main(String[] args) {
 		Scanner sc=new Scanner(System.in);
-		//3
-		//12
-		/*System.out.println("월을 입력하세요");
+		/*//문제1
+		int a=3,b=0;
+		switch(a+2) {
+		case 5:b=1;
+		default: b+=2;
+		}
+		System.out.println(a);//실행결과 3
+		
+		//문제2
+		int count=2;
+		int hap=0;
+		switch(++count) {
+		case 1:hap=hap+count++;
+		case 2:hap=hap+count++;
+		case 3:hap=hap+count++;
+		case 4:hap=hap+count++;
+		case 5:hap=hap+count++;
+		}
+		System.out.println(String.format("hap의 값 : %d\n",hap));//실행결과 12
+		
+		//문제6
+		System.out.println("월을 입력하세요");
 		int mon=sc.nextInt();
 		switch(mon) {
 		case 1: 
@@ -50,11 +69,12 @@ public class javaAcademy1 {
 			default:
 				System.out.println("월이 아님");		
 		}
-		//2
-		//
+		
+		//연습문제1 = 4번
+		//연습문제2 = default:
 		 
 		 
-		//문제3
+		//연습문제3
 		System.out.println("두 정수를 입력");
 		int a=sc.nextInt();
 		int b=sc.nextInt();
@@ -69,7 +89,7 @@ public class javaAcademy1 {
 			System.out.println(b!=0);		
 		}
 		
-		//문제4
+		//연습문제4
 		System.out.println("두 정수 입력");
 		int c=sc.nextInt();
 		int d;
@@ -86,7 +106,7 @@ public class javaAcademy1 {
 		System.out.println(d);
 		
 		
-		//문제5
+		//연습문제5
 		int age=25;
 		int cm=95;
 		if(age<20) {
@@ -135,17 +155,16 @@ public class javaAcademy1 {
 		
 		//도전2
 		int m=100;
-		
 		System.out.println("가졍형편 정도를 입력하시오");
 		int rich=sc.nextInt();
 		System.out.println("이전학기 학정을 입력하시오");
 		double grade=sc.nextDouble();
 		
 		if(rich>=100&&grade>=4.0) {
-			m=m-(100*20/100);
+			m=m-(m*20/100);
 				}
 		else {
-			m=m-(100*40/100);
+			m=m-(m*40/100);
 		}
 		System.out.println("다음 학기 납일할 등록급은"+m+"만원 입니다");*/
 		
@@ -156,25 +175,33 @@ public class javaAcademy1 {
 		double p1;
 		if(kw>=1&&kw<=100) {
 			p=370;
-			
+			p1=52.00;
 		}
 		else if(kw>=101&&kw<=200) {
 			p=660;
+			p1=88.50;
 		}
 		else if(kw>=201&&kw<=300) {
 			p=1130;
+			p1=127.80;
 		}
 		else if(kw>=301&&kw<=400) {
 			p=2710;
+			p1=184.30;
 		}
 		else if(kw>=401&&kw<=500) {
 			p=5130;
+			p1=274.30;
 		}
 		else {
 			p=9330;
+			p1=494.00;	
 		}
-		
-		System.out.println("이번 달 요금은"+"입니다");
+		int m=(int) (p+(kw*p1));
+		m=(int) (p+(kw*p1));
+		m=(int) m+(m)*9/100;
+	
+		System.out.println("이번 달 요금은"+m+"입니다");
 
 	}
 
