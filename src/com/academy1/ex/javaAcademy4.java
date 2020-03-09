@@ -31,15 +31,16 @@ public class javaAcademy4 {
 		System.out.println(sum2);
 		
 		for(int i4=0;i4<10;i4++) {
-			System.out.println(i4);
+			
 			if(i4==2) {
 				break;//반복문을 빠져나간다
 			}		
+			System.out.println(i4);
 		}
 		for(int i5=0;i5<10;i5++) {
 			
-			if(i5==2) {
-				continue;
+			if(i5==5) {
+				continue;//건너뜀
 			}	
 			System.out.println(i5);
 		}
