@@ -158,11 +158,11 @@ public class javaacademy6 {
 
 		//문제4
 
-		sc.nextLine();
+		
 
 		System.out.println("A~C 까지의 문자를 입력하시오");
 
-		
+		//sc.nextLine();
 
 		String s=sc.nextLine();//혹은 위에 sc 지우고 String s=sc.next();
 

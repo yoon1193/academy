@@ -92,7 +92,7 @@ public class javaAcademy1 {
 
 		
 		//연습문제4
-		System.out.println("두 정수 입력");
+		System.out.println("정수 입력");
 		int c=sc.nextInt();
 		int d;
 		
@@ -107,6 +107,7 @@ public class javaAcademy1 {
 		}
 		System.out.println(d);
 		
+		sc.nextLine();
 		
 		//연습문제5
 		int age=25;

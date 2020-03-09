@@ -31,10 +31,13 @@ public class javaAcademy5 {
 		if(g>10) {
 			System.out.println("10보다 크다");
 		}
-		else {
-			System.out.println("10 이거나 10보다 작다");
+		else if(g<10){
+			System.out.println("10보다 작다");
 		}
-		//문제5
+		else {
+			System.out.println("10 입니다");
+		}*/
+		/*//문제5
 		System.out.println("수 입력");
 		int h=sc.nextInt();
 		if(h>0) {
@@ -55,9 +58,11 @@ public class javaAcademy5 {
 		//문제7/
 		int a=3;
 		int b=1;
-		for(a=3;a!=10;a=a+3) {
-			
+		for(b=1;b!=10;b++) {
+			a=a+3;	
 		}
+		
+		System.out.println(a);
 		//문제7-1
 		int j;
 		for(j=0;j<3;j++) {
@@ -84,8 +89,8 @@ public class javaAcademy5 {
 		int a=sc.nextInt();
 		int b=sc.nextInt();
 		int sum=0;
-		for(a=0; a<=b; a++) {
-			sum=sum+a;	
+		for(int i=a+1; i<b; i++) {
+			sum=sum+i;	
 		}
 		System.out.println(sum);
 		//문제10/
@@ -95,7 +100,7 @@ public class javaAcademy5 {
 		String colorInput=sc.next();
 		int brightnessInput=brightness+1;
 		System.out.println("현재 색상은"+colorInput+ "밝기는" +brightnessInput+ "이다");
-		//문제 11
+	    //문제 11
 		System.out.println("두 수를 입력");
 		int a=sc.nextInt();
 		int b=sc.nextInt();
@@ -142,20 +147,67 @@ public class javaAcademy5 {
 		for(a=2;a<=100;a+=2) {
 			sum=sum+a;	
 		}
-		System.out.println(sum);*/
+		System.out.println(sum);
 		//문제16
 		int a;
 		int sum = 0;
-		for(a=0;a<=100;a++) {
+		for(a=1;a<=100;a++) {
 			if(a%2==0) {
-				sum=sum-1;
+				sum=sum-a;
 			}
 			else {
-				sum=sum+1;
+				sum=sum+a;
 			}
 		}
 		System.out.println(sum);
+		//문제 17
+		double d;
+		double sum=0;
+		for(d=1;d<100;d++) {
+			sum=sum+d/(d+1);
+		}
+		System.out.println(sum);
+		//문제 18
+		int a=1;
+		int b=1;
+		int c = 0;
+		System.out.println(a);
+		System.out.println(b);
+		for(int i=1;i<=10;i++) {
+			c=a+b;
+			System.out.println(c);
+			a=b;
+			b=c;
+			
+		}
+		System.out.println("돈 넣으세요");
+		int money=sc.nextInt();
+		System.out.println("커피 2000원 콜라 1000원 사이다 1500원");
+		String drk=sc.next();
+		int change=0;
 		
+		switch(drk) {
+		
+		
+		case "커피":
+			change=money-2000;
+			System.out.println("커피"+" "+"잔돈은"+change+"원");
+			break;
+		case "콜라":
+			change=money-1000;
+			System.out.println("콜라"+" "+"잔돈은"+change+"원");
+			break;
+		case "사이다":
+			change=money-1500;
+			System.out.println("사이다"+" "+"잔돈은"+change+"원");
+			break;
+		default:
+			break;
+		
+		}*/
+		
+		
+			
 	}
 		
 	

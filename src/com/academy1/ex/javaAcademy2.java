@@ -52,8 +52,12 @@ public class javaAcademy2 {
 		sArray[1]=str1+str2;
 		sArray[2]=sArray[0];
 		sArray[3]=sArray[0]+"world";
+		
 		System.out.println(sArray[0]+"\t"+sArray[1]+"\t"+sArray[2]+"\t"+sArray[3]);
 		System.out.println(Arrays.toString(sArray));
+		sArray[2]="hello3";
+		System.out.println(sArray[0]+"\t"+sArray[1]+"\t"+sArray[2]+"\t"+sArray[3]);
+		
 	}
 
 }
