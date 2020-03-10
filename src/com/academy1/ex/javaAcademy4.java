@@ -44,7 +44,16 @@ public class javaAcademy4 {
 			}	
 			System.out.println(i5);
 		}
-			
+		int a=3;
+		int b=1;
+		do {
+			a=a+3;
+			b++;
+		}
+		while(b<10) ;
+			System.out.println(a);
+		
+		
 		
 	}
 

@@ -36,8 +36,8 @@ public class javaAcademy5 {
 		}
 		else {
 			System.out.println("10 입니다");
-		}*/
-		/*//문제5
+		}
+		//문제5
 		System.out.println("수 입력");
 		int h=sc.nextInt();
 		if(h>0) {
@@ -55,7 +55,7 @@ public class javaAcademy5 {
 		else {
 			System.out.println("홀수 입니다");
 		}
-		//문제7/
+		//문제7
 		int a=3;
 		int b=1;
 		for(b=1;b!=10;b++) {
@@ -93,12 +93,12 @@ public class javaAcademy5 {
 			sum=sum+i;	
 		}
 		System.out.println(sum);
-		//문제10/
+		//문제10
 		String color="빨강";
 		int brightness=50;
 		System.out.println("색과 밝기를 입력하시오");
 		String colorInput=sc.next();
-		int brightnessInput=brightness+1;
+		int brightnessInput=brightness++;
 		System.out.println("현재 색상은"+colorInput+ "밝기는" +brightnessInput+ "이다");
 	    //문제 11
 		System.out.println("두 수를 입력");
@@ -180,36 +180,140 @@ public class javaAcademy5 {
 			b=c;
 			
 		}
-		System.out.println("돈 넣으세요");
-		int money=sc.nextInt();
-		System.out.println("커피 2000원 콜라 1000원 사이다 1500원");
-		String drk=sc.next();
-		int change=0;
 		
-		switch(drk) {
+		//자판기
+		//1,2,3,4,0를 입력받아 
+		//숫자의 경우는 숫자메뉴 0인경우는 프로그램 종료
+		String inputString="";//초기화//null . 찍으면 문제됨
+		//사용자가 0을 입력할때까지 계속 반복하눈 프로그램
+		while(!inputString.equals("0")) {
+			System.out.println("1:밀크커피, 2:블랙커피, 3:라떼,  0:종료");
+			inputString = sc.nextLine();
+			switch(inputString) {
+			case "1":
+				System.out.println("밀크커피");
+				
+				break;
+			case "2":
+				System.out.println("블랙커피");
+				
+				break;
+			case "3":
+				System.out.println("라떼");
+				
+				break;
+			case "0":
+				System.out.println("종료");
+				
+				break;
+			default:
+				System.out.println("잘 못된 입력입니다");
+				break;
+						
+			}	
+		}
+		System.out.println("종료");	
 		
-		
-		case "커피":
-			change=money-2000;
-			System.out.println("커피"+" "+"잔돈은"+change+"원");
-			break;
-		case "콜라":
-			change=money-1000;
-			System.out.println("콜라"+" "+"잔돈은"+change+"원");
-			break;
-		case "사이다":
-			change=money-1500;
-			System.out.println("사이다"+" "+"잔돈은"+change+"원");
-			break;
-		default:
-			break;
-		
-		}*/
-		
-		
+		//은행계좌 프로그램
+		//사용자가 사용 할 수 있는 메뉴 1.입금 2.출금 3.조회 4.종료
+		//입금한 금액을 account 변수에 저장한다
+		//모든 case문에서 다 접근할수 있도록 account 변수를 while문 밖에 선언한다.
+		int account=0;
+		String s="";
+		while(!s.equals("4")) {
+			System.out.println("1:입금, 2:출금, 3:조회, 4:종료");
+			s = sc.next();
+			switch(s) {
+			case "1":
+				System.out.println("입금 할 금액을 넣어주세요");
+				int input=sc.nextInt();
+				account=account+input;
+				System.out.println(input+"원 입금완료");
+				System.out.println("현재 잔액은"+ account+"원 입니다");
+				break;
+			case "2":
+				System.out.println("출금 할 금액을 입력하세요");
+				int output=sc.nextInt();
+				if(output>account) {
+					System.out.println("잔액 부족");
+				}
+				else {
+					account=account-output;
+				}
+				System.out.println("현재 잔액은"+ account+"원 입니다");
 			
-	}
-		
+				break;
+			case "3":
+				System.out.println("조회 된 금액은"+account+"원 입니다");
+				break;
+			case "4":
+				System.out.println("종료");
+				break;
+			default:
+				System.out.println("잘 못된 입력입니다.");
+				break;
+			}	
+		}*/
 	
-
+	
+		int money=0;
+		int inputMoney = 0;
+		int m1000,m500,m100,m50=0;
+		String s="";
+		while(!s.equals("4")) {
+			System.out.println("1:사이다(700원), 2:콜라(500원), 3:환타(350원), 4:반환, 5:투입");
+			s = sc.next();
+			switch(s) {
+			case "1":
+				if(inputMoney>700) {
+					System.out.println("사이다(700원)");
+					money=money-700;
+					System.out.println("현재 잔액은"+money+"입니다");	
+				}
+				else{
+					System.out.println("잔액이 부족합니다");	
+				}
+				break;
+			case "2":
+				if(inputMoney>350) {
+					System.out.println("콜라(500원)");
+					money=money-500;
+					System.out.println("현재 잔액은"+money+"입니다");
+				}
+				else {
+					System.out.println("잔액이 부족합니다");	
+				}break;
+			case "3":
+				if(inputMoney>350) {
+					System.out.println("환타(350원)");
+					money=money-350;	
+					System.out.println("현재 잔액은"+money+"입니다");	
+				}
+				else {
+					System.out.println("잔액이 부족합니다");
+				}	
+				break;
+			case "4":
+				System.out.println("반환");
+				m1000=money/1000;
+				m500=(money%1000)/500;
+				m100=(money%1000)%500/100;
+				m50=(money%1000)%500%100/50;
+				System.out.println("반환된 금액은"+"\n천원짜리"+m1000+"개"+"\n오백원짜리"+m500+"개"+"\n백원짜리"+m100+"개"+"\n오십원짜리"+m50+"개 입니다");
+				System.out.println("종료");
+				break;
+			case "5":
+				System.out.println("돈을 넣으세요");
+				inputMoney=sc.nextInt();
+				money=money+inputMoney;
+				System.out.println("현재 잔액은"+money+"입니다");		
+				break;
+			default:
+				System.out.println("잘 못된 입력입니다.");
+				break;
+			}	
+			
+		}
+	}
+	
 }
