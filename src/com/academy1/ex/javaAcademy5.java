@@ -98,8 +98,19 @@ public class javaAcademy5 {
 		int brightness=50;
 		System.out.println("색과 밝기를 입력하시오");
 		String colorInput=sc.next();
-		int brightnessInput=brightness++;
-		System.out.println("현재 색상은"+colorInput+ "밝기는" +brightnessInput+ "이다");
+		color=colorInput;
+		int brightnessInput=sc.nextInt();
+		if(brightnessInput>=brightness) {
+			while(brightnessInput>brightness) {
+				brightness++;
+			}
+		}
+		else {
+			while(brightnessInput<brightness) {
+				brightness--;
+			}
+		}
+		System.out.println("현재 색상은"+color+ "밝기는" +brightness+ "이다");
 	    //문제 11
 		System.out.println("두 수를 입력");
 		int a=sc.nextInt();
@@ -260,14 +271,16 @@ public class javaAcademy5 {
 		int inputMoney = 0;
 		int m1000,m500,m100,m50=0;
 		String s="";
+		String result="";
 		while(!s.equals("4")) {
 			System.out.println("1:사이다(700원), 2:콜라(500원), 3:환타(350원), 4:반환, 5:투입");
 			s = sc.next();
 			switch(s) {
 			case "1":
-				if(inputMoney>700) {
+				if(money>700) {
 					System.out.println("사이다(700원)");
 					money=money-700;
+					result+="사이다 "; 
 					System.out.println("현재 잔액은"+money+"입니다");	
 				}
 				else{
@@ -275,18 +288,20 @@ public class javaAcademy5 {
 				}
 				break;
 			case "2":
-				if(inputMoney>350) {
+				if(money>500) {
 					System.out.println("콜라(500원)");
 					money=money-500;
+					result+="콜라 ";
 					System.out.println("현재 잔액은"+money+"입니다");
 				}
 				else {
 					System.out.println("잔액이 부족합니다");	
 				}break;
 			case "3":
-				if(inputMoney>350) {
+				if(money>350) {
 					System.out.println("환타(350원)");
-					money=money-350;	
+					money=money-350;
+					result+="환타 ";
 					System.out.println("현재 잔액은"+money+"입니다");	
 				}
 				else {
@@ -299,7 +314,9 @@ public class javaAcademy5 {
 				m500=(money%1000)/500;
 				m100=(money%1000)%500/100;
 				m50=(money%1000)%500%100/50;
-				System.out.println("반환된 금액은"+"\n천원짜리"+m1000+"개"+"\n오백원짜리"+m500+"개"+"\n백원짜리"+m100+"개"+"\n오십원짜리"+m50+"개 입니다");
+				System.out.println("구매한 음료: "+result);
+				System.out.println("반환된 금액은"+"\n천원짜리"+m1000+"개"+"\n오백원짜리"+m500+"개"+
+				"\n백원짜리"+m100+"개"+"\n오십원짜리"+m50+"개 입니다");
 				System.out.println("종료");
 				break;
 			case "5":
