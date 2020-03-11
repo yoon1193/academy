@@ -7,25 +7,25 @@ public class javaAcademy6 {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		//p.7문제10
-		//p.8문제1
-		//p.8문제2
+		
+		//p.7문제10 무한루프
+		//p.8문제1 97
+		//p.8문제2 무한루프
 		//p.9문제3
-		System.out.println("하나의 수를 입력하세요");
+		/*System.out.println("하나의 수를 입력하세요");
 		int input=sc.nextInt();
 		int a=1;
 		int b=0;
-		int c=0;
 		for(int i=1;i<input;i++) {
-			c=a+b;
-			if(c>input) {
+			b+=a;
+			if(b>input) {
 				break;
 			}
-			a=b;
-			b=c;
-			System.out.println(c);
+			a++;
+			
+			System.out.println(b);
 		}
-		//p.9문제5
+		//p.9문제5 몰르
 		//p.10문제3
 		int sum=0;
 		int i2=0;
@@ -87,6 +87,10 @@ public class javaAcademy6 {
 			else if(s1.equals("/")) {
 				result = num3/num4;
 			}
+			else {
+				System.out.println("잘못입력");
+				break;
+			}
 			System.out.println(s1+ "연산입니다." +num3+s1+num4+ "결과값은="+result);
 			//아무키나 눌러주세요
 			break;
@@ -101,20 +105,19 @@ public class javaAcademy6 {
 		
 		}
 		//p.13문제4
-		//p.13문제1 2번
-		//p.13문제2 4번
+		//p.13문제1 1번
+		//p.13문제2 1번
 		//p.13문제3 1번
 		//p.14문제9 
 		//p.14문제-
 		Random rand=new Random();
 		System.out.println("0~9까지 숫자를 입력하세요.");
 		int com=rand.nextInt(9);
-		for(int j=1;j<=com;j++) {
-			System.out.println(j+"번 쨰 도전");
+		for(int j=0;j<10;j++) {
+			System.out.println(j+1+"번 쨰 도전");
 			int user=sc.nextInt();
 			if(user>com) {
 				System.out.println(user+"보다 작습니다");
-				
 			}
 			else if(user<com) {
 				System.out.println(user+"보다 큽니다");
@@ -142,17 +145,29 @@ public class javaAcademy6 {
 			}
 		}
 		System.out.println("시험 점수를 입력하세요");
+		Random rand=new Random();
 		int sum2=0;
 		int rand1=rand.nextInt();
-		for(;;) {
+		while(true) {
 			int num5=sc.nextInt();
-			if(num5==0) {
-				System.out.println("시험 점수의 합계는"+sum2+"점 입니다.");
+			if(num5==0) {		
 				break;
 			}
 			sum2+=num5;
 		}	
+		System.out.println("시험 점수의 합계는"+sum2+"점 입니다.");*/
+		System.out.println("1부터 덧셈하는 프로그램");
+		System.out.println("마지막 값을 입력하세요");
+		int lastNum=sc.nextInt();
+		int sum=0;
 		
+		for(int i=1; i<=lastNum;i++) {
+			sum+=i;
+			System.out.println("["+(i-1)+"]행 TotalNumber의 값="+sum);
+			
+			
+		}
+		System.out.println("1부터"+lastNum+"까지의 총합은"+sum+"입니다.");
 		
 	
 	}
