@@ -8,11 +8,11 @@ public class javaAcademy6 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		
-		//p.7문제10 무한루프
+		/*//p.7문제10 무한루프
 		//p.8문제1 97
 		//p.8문제2 무한루프
 		//p.9문제3
-		/*System.out.println("하나의 수를 입력하세요");
+		System.out.println("하나의 수를 입력하세요");
 		int input=sc.nextInt();
 		int a=1;
 		int b=0;
@@ -144,8 +144,9 @@ public class javaAcademy6 {
 				System.out.println(i4);
 			}
 		}
+		//p.17문제2
 		System.out.println("시험 점수를 입력하세요");
-		Random rand=new Random();
+		//Random rand=new Random();
 		int sum2=0;
 		int rand1=rand.nextInt();
 		while(true) {
@@ -155,22 +156,235 @@ public class javaAcademy6 {
 			}
 			sum2+=num5;
 		}	
-		System.out.println("시험 점수의 합계는"+sum2+"점 입니다.");*/
+		System.out.println("시험 점수의 합계는"+sum2+"점 입니다.");
 		System.out.println("1부터 덧셈하는 프로그램");
 		System.out.println("마지막 값을 입력하세요");
 		int lastNum=sc.nextInt();
-		int sum=0;
+		int sum3=0;
 		
-		for(int i=1; i<=lastNum;i++) {
-			sum+=i;
-			System.out.println("["+(i-1)+"]행 TotalNumber의 값="+sum);
+		for(int i5=1; i5<=lastNum;i5++) {
+			sum3+=i5;
+			System.out.println("["+(i5-1)+"]행 TotalNumber의 값="+sum3);
+		}
+		System.out.println("1부터"+lastNum+"까지의 총합은"+sum3+"입니다.");
+		
+		//p.19문제1
+		int i6;
+		for(i6=60;i6>=0;i6--) {
+			System.out.println(i6+"초");
+			if(i6==0) {
+				System.out.println("발사!");
+			}
+		}
+		
+		//p.19문제2
+		System.out.println("몇 번 반복 할까요?");
+		int count1=sc.nextInt();
+		for(int i7=0;i7<count1;i7++) {
+			System.out.println("안녕하세요?");
+		}
+		
+		//p.20문제6
+		for(int num6=1;num6<=100;num6++) {
+			if(num6%3==0) {
+				System.out.println(num6);
+			}
+		}
+		//p.20문제2
+		int sum4=0;
+		int c=0;
+		int i7;
+		System.out.println("첫 번쨰 수를 입력하세요");
+		int firstNum=sc.nextInt();
+		System.out.println("두 번쨰 수를 입력하세요");
+		int secondNum=sc.nextInt();
+		for(i7=firstNum;i7<=secondNum;i7++) {
+			sum4+=i7;
+		}
+		for(i7=secondNum;i7<=firstNum;i7++) {
+			sum4+=i7;
+		}
+		System.out.println(sum4);
+		
+		//p.21문제3
+		int count2=0;
+		System.out.println("하나의 수를 입력해라");
+		int randNum=sc.nextInt();
+		for(int num7=2;num7<randNum;num7++) {
+			if(randNum%num7==0) {
+				count2++;
+			}
+		}
+		if(count2==0) 
+			System.out.println(randNum+"은/는 소수 입니다");
+		
+		else
+			System.out.println(randNum+"은/는 소수가 아닙니다.");
+		
+		//p.21문제7
+		for(int i8=1;i8<=100;i8++) {
+			if(i8%3==0||i8%5==0) {
+				System.out.println(i8);
+			}
+		}
+		//p.21문제8	
+		System.out.println("시작정수=");
+		int stratNum=sc.nextInt();
+		System.out.println("종료정수");
+		int endNum=sc.nextInt();
+		int sum5=0;
+		for(int i9=stratNum;i9<=endNum;i9++) {
+			sum5+=i9;
+		}
+		System.out.println("Sum of "+stratNum+" to " +endNum+ " = " +sum5);
+	
+		//p.22문제4
+		int c;
+		System.out.println("첫 번째 숫자 입력");
+		int a1=sc.nextInt();
+		System.out.println("두 번째 숫자 입력");
+		int b1=sc.nextInt();
+		System.out.println(a1+"의 배수 "+b1+"번 출력");
+		for(c=1;c<=b1;c++) {
 			
+			System.out.println(c*a1);
 			
 		}
-		System.out.println("1부터"+lastNum+"까지의 총합은"+sum+"입니다.");
+		//p.22문제5 4번
+		//p.23문제6
+		int num = 7;
+		for(int i=9;i>=1;i--) {
+			System.out.println(num+"*"+i+"="+num*i);
+		}
+		//p.23문제9
+		System.out.println("정수를 입력하시여");
+		int num=sc.nextInt();
+		for(int i=1;i<=num;i++) {
+			if(num%i==0) {
+				System.out.println(i);
+			}
+		}
+		//p.23문제
+		int count=0;
+		int sum=0;
+		System.out.println("하나의 수를 입력");
+		int num=sc.nextInt();
+		for(int i=1;i<=1000;i++) {
+			if(i%num==0) {
+				sum+=i;
+				count++;
+			}
+		}
+		System.out.println("1부터 1000까지 "+num+"의 배수의 개수="+count+" 합="+sum);
+		//p.24문제
+		System.out.println();
+		int num=sc.nextInt();
+		while(num!=0) {
+			if(num>0) {
+				System.out.println("양수입니다. 절대값은 "+num+"입니다");
+			break;
+			}
+			else if(num<0) {
+				System.out.println("음수입니다. 절대값은 "+(-num)+"입니다");
+			break;
+			}
+		}
+		System.out.println("0 입니다.");
+		//p.24문제10
 		
-	
+		//화씨온도 - 32) ÷ 1.8 = 섭씨온도
+		double a=0;
+		System.out.println("화씨온도"+"\t"+"섭씨온도");
+		for(int i=0;i<=100;i++) {
+			if(i%10==0) {
+			    a=(i-32)/1.8;
+				int a1=(int)a;
+				System.out.println(i+"\t"+a1);
+			}
+		}
+		//p.25문제12
+		for(int i=0;i<10;i++) {
+			System.out.println("데이터를 입력하시요");
+			int a=sc.nextInt();
+			if(a<=50) {
+			for(int j=1;j<=a;j++) {
+				System.out.print("*");
+			}
+			}
+			else {
+			System.out.println("50이 넘습니다");
+			}
+		}
+		
+		//p.25문제14
+		System.out.println("n의 값을 입력하세요");
+		int a=sc.nextInt();
+		int sum=0;
+		int result=0;
+		for(int i=1;i<=a;i++) {
+			result=i*i;
+			sum+=result;
+			
+		}
+		System.out.println(sum);
+		
+		int a=1000;
+		int result=0;
+		System.out.println("초기 연료량="+a);
+		while(a>=100) {
+			System.out.println("연료 충전은 +, 소모는 -로 입력해주세요.:");
+			int p=sc.nextInt();
+			a=(a+p);
+			System.out.println("현재 남아있는 양은 "+a+"입니다");
+			
+		
+			
+		}
+		System.out.println("(경고) 연료가 10% 미만입니다.");
+		
+		//p.25문제17
+		int count2=0;
+		System.out.println("하나의 수를 입력해라");
+		int randNum=sc.nextInt();
+		for(int num7=2;num7<randNum;num7++) {
+			if(randNum%num7==0) {
+				count2++;
+			}
+		}
+		if(count2==0) 
+			System.out.println(randNum+"은/는 소수 입니다");
+		
+		else
+			System.out.println(randNum+"은/는 소수가 아닙니다.");
+		//p.26문제5
+		for(int i=1;i<=1000;i++) {
+			System.out.print(i+" ");
+			if(i%10==0) {
+				System.out.println("");
+			}
+		}*/
+		//p.26문제2
+		int max = 0;
+		int min = 0;
+		int num;
+		do {
+			System.out.println("하나의 숫자를 입력하세요(0입력종료)");
+			num = sc.nextInt();
+			if(num>max) {
+				max=num;
+			}
+			if(num<min) {
+				min=num;
+			}
+		}while(num !=0 ); 
+		System.out.println(min);
+		System.out.println(max);
+		
+			
+		
+		
+		
+		
 	}
-	
 
 }
