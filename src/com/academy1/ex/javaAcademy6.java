@@ -9,11 +9,11 @@ public class javaAcademy6 {
 		Scanner sc = new Scanner(System.in);
 		Random rand=new Random();
 		
-		/*//p.7문제10 무한루프
+		//p.7문제10 무한루프
 		//p.8문제1 97
 		//p.8문제2 무한루프
 		//p.9문제3
-		System.out.println("하나의 수를 입력하세요");
+		/*System.out.println("하나의 수를 입력하세요");
 		int input=sc.nextInt();
 		int a=1;
 		int b=0;
@@ -109,9 +109,11 @@ public class javaAcademy6 {
 		//p.13문제3 1번
 		//p.14문제9 
 		//p.14문제-
-		Random rand=new Random();
+		//Random rand=new Random();
 		System.out.println("0~9까지 숫자를 입력하세요.");
-		int com=rand.nextInt(9);
+		int com=rand.nextInt(10);
+		System.out.println(com);
+		boolean isOk=false;
 		for(int j=0;j<10;j++) {
 			System.out.println(j+1+"번 쨰 도전");
 			int user=sc.nextInt();
@@ -122,10 +124,14 @@ public class javaAcademy6 {
 				System.out.println(user+"보다 큽니다");
 			}
 			else if(user==com) {
-				System.out.println("우와!정확합니다."+" "+j+"번째만에 맞췄군요!");
+				System.out.println("우와!정확합니다."+" "+(j+1)+"번째만에 맞췄군요!");
+				isOk=true;
 				break;
 			}
 		}
+		if(isOk==false) {
+			System.out.println("10번 안에 맞추지 못함");
+			}
 		
 		//p.15문제1
 		int i3;
@@ -347,18 +353,22 @@ public class javaAcademy6 {
 		System.out.println("(경고) 연료가 10% 미만입니다.");
 		
 		//p.26문제17
-		int count2=0;
+		boolean isOk=true;
 		System.out.println("하나의 수를 입력해라");
-		int randNum=sc.nextInt();
-		for(int num7=2;num7<randNum;num7++) {
-			if(randNum%num7==0) {
-				count2++;
+		int inputNum=Integer.parseInt(sc.nextLine());
+		for(int i=2;i<inputNum;i++) {
+			if(inputNum%i==0) {
+				isOk=false;
+				break;
 			}
 		}
-		if(count2==0) 
-			System.out.println(randNum+"은/는 소수 입니다");
-		else
-			System.out.println(randNum+"은/는 소수가 아닙니다.");
+		if(isOk==true) {
+			System.out.println("소수");
+		}
+		else {
+			System.out.println("소수x");
+		}
+		
 		//p.27문제5
 		for(int i=1;i<=1000;i++) {
 			System.out.print(i+" ");
@@ -402,19 +412,34 @@ public class javaAcademy6 {
 		//p.28문제 지그재그
 		int i;
 		int j;
-		int n;
 		for(i=0;i<5;i++) {
 			if(i%2==0) {
 				for(j=1;j<=5;j++) {
 					System.out.print(5*i+j);
 				}
 			}
-				else {
-					for(j=1;j<=5;j++) {
-						System.out.print((5*(i+1)-j)+1);
-					}
+			else {
+				for(j=1;j<=5;j++) {
+					System.out.print((5*(i+1)-j)+1);
 				}
+			}
 			System.out.println();
+		}
+		//다른 풀이
+		int lineMax=0;
+		int lineRev=0;
+		for(int i=0;i<25;i++) {
+			if(i%5==0) {
+				System.out.println("");
+				lineMax=i+5;
+				lineRev++;
+			}
+			if(lineRev%2!=0) {
+				System.out.print("\t"+(i+1));
+			}
+			else {
+				System.out.print("\t"+(lineMax-i%5));
+			}
 		}
 		
 		//p.30 문제 달력
