@@ -4,10 +4,10 @@ class Customers{
 	public String name;
 	public String grade;
 	public int sal;
-//	public Customers() {
-//		this.grade="silver";
-//		this.sal=0;
-//	}
+	public Customers() {
+		this.grade="silver";
+		this.sal=0;
+	}
 	public Customers(String name) {
 		super();
 		this.name = name;
