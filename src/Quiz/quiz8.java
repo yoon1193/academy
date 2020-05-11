@@ -23,7 +23,7 @@ class QuickSort implements Sort{
 
 	@Override
 	public void description() {
-		System.out.println("QuickSort다");
+		System.out.println("QuickSort 입니다");
 		
 	}
 	
@@ -38,7 +38,7 @@ class HeapSort implements Sort{
 
 	@Override
 	public void desendning(int[] a) {
-		System.out.println("HeapSort");
+		System.out.println("HeapSort 입니다");
 		
 	}
 
@@ -65,7 +65,7 @@ class BubbleSort implements Sort{
 
 	@Override
 	public void description() {
-		System.out.println("BubbleSort");
+		System.out.println("BubbleSort 입니다");
 	}
 	
 }
