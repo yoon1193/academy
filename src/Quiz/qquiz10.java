@@ -1,22 +1,23 @@
 package Quiz;
 class Circle{
-	int radius;
+	int radius=0;
 	public void show() {
 		System.out.println("반지름이 "+radius+"인 원이다.");
 	}
+	public Circle() {}
 	public Circle(int radius) {
-		super();
+
 		this.radius = radius;
 	}
 	
 }
 class ColoredCircle extends Circle{
-	String color;
+	String color = "";
 	public void show() {
 		System.out.println("반지름이 "+radius+"인 "+color+"원이다.");
 	}
+	public ColoredCircle() {}
 	public ColoredCircle(int radius, String color) {
-		super(radius);
 		this.radius = radius;
 		this.color = color;
 	}

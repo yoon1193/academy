@@ -12,6 +12,7 @@
 //}
 //class Student implements Human{
 //	int age=0;
+//	public Student() {}
 //	public Student(int age) {
 //	this.age=age;
 //	}

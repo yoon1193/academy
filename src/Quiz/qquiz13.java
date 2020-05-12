@@ -1,12 +1,24 @@
 package Quiz;
 class Parents{
-	String name = "영조";
+	String name;
+	Parents(){
+		name = "영조";
+	}
+	public Parents(String name) {
+		this.name = name;
+	}
 	public void print() {
-		
+		System.out.println(name);
 	}
 }
 class Child extends Parents{
-	String name = "사도세자";
+	String name ;
+	Child(){
+		name = "사도세자";
+	}
+	public Child(String name) {
+		this.name = name;
+	}
 	public void print() {
 		System.out.println("나는 "+name+"이다");
 	}
