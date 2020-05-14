@@ -32,11 +32,11 @@ class BestGirl extends GoodGirl{
 public class quiz9 {
 
 	public static void main(String[] args) {
-		Girl g1 = new Girl("g1");
-		Girl g2 = new GoodGirl("g2");
-		GoodGirl gg = new BestGirl("gg");
-		g2.show();
-		gg.show();
+//		Girl g1 = new Girl("g1");
+//		Girl g2 = new GoodGirl("g2");
+//		GoodGirl gg = new BestGirl("gg");
+//		g2.show();
+//		gg.show();
 		
 		Girl[] girls = {new Girl("∞©º¯¿Ã"),new GoodGirl("ƒ·¡„"),new BestGirl("»≤¡¯¿Ã")};
 		for(Girl g : girls) {
